@@ -144,8 +144,8 @@ class TrackingNode(LifecycleNode):
 
         tracked_detections_msg = DetectionArray()
         tracked_detections_msg.header = img_msg.header
-        detections_msg.height = img_msg.height
-        detections_msg.width = img_msg.width
+        tracked_detections_msg.height = img_msg.height
+        tracked_detections_msg.width = img_msg.width
 
         # convert image
         cv_image = self.cv_bridge.imgmsg_to_cv2(img_msg, desired_encoding="bgr8")
